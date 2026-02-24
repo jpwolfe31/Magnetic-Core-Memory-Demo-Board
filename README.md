@@ -38,7 +38,7 @@ The demo board allows one to individually set bits in the array, to write and re
 
 Oscilloscope screen captures show the various board signals in operation.  This is a separate document in the repository.
 
-Also, check out the video at ___________________.
+Also, check out the video at https://youtube.com/shorts/UvEwiUESzG4?feature=share
 
 Happy to answer any questions.
 
