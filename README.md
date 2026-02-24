@@ -1,5 +1,4 @@
 # Magnetic-Core-Memory-Demo-Board
-Magnetic Core Memory Demo Board
 
 Magnetic Core Memory was used for random access storage in computers through the 70s.  I just discovered it last year and was intrigued by its operation.  There are many sites that go into detail on its operation so I will not reproduce that here.  
 
@@ -29,39 +28,13 @@ The small boards attached to the scope probes are differential amplifiers that I
 
 I modified the motion detector to lower its profile by removing the three-lead sensor component from the end of its small board and resoldering it to one side of the small board.  
 
-I looked into wrapping the x lines as shown below to reduce the number of x drive chips by one-half (x0 goes to x4, x1 goes to x5, etc.).  
+Final demo Board below:
 
-    ________________
-    |		            |
-_________________
-|				        |
-.
-.
-.
-/   \	  /  	\	  /  	\		            y1
-\	  /  	\	  /  	\	  /		            y0
-x0	x1	x2	x3	x4	x5   .    .    .  
-
-x0u  -	-  	-  	x4d
-y0r	y0r	y0r	y0r	y0r
-id	iu	id	iu	id
-
-current directions at the cores:
-  r right
-  l left
-  u up
-  d down
-
-When a 1 is written to x0y0 as shown in the chart above, x4y1-7 will flip if the inhibit current equals the x4 current.  Therefore, with the wrap, the inhibit current must be significantly less than the x current.  I experimented with different current values, but could not achieve ultra reliable writes and reads, so I chose not to wrap the x lines.  This choice was made easier once I had decided to limit the project to an 8 by 8 matrix of 64 bits.
+<img width="762" height="1015" alt="image" src="https://github.com/user-attachments/assets/09cf16c5-22c0-410d-8e39-cd69305ecd31" />
 
 The core plane is set on white plexi and covered by clear polycarbonate.  Sandwiched under the white plexi are the ribbon cables from the plane to the board.  To get the right side y lines to match up with the connector, I needed to fold them 90 degrees up and then fold them back down over themselves to the connector.  The other lines under the plexi just required one 90 degree fold.  The plane and the board are mounted on a thick abs plastic sheet.
 
 The demo board allows one to individually set bits in the array, to write and read data and to do both of these things with the inhibit line active to demonstrate the inhibit function is working.  Extremely long tests can be made with random numbers being written and read (with and without the inhibit).  There are two switches at the top of the board that allow you to short the sense and inhibit lines to generate errors to help show the board is operating properly.  The memory works quite well.  Ten million consecutive writes and reads without error is no problem.
-
-
-Final demo Board below:
-
-<img width="762" height="1015" alt="image" src="https://github.com/user-attachments/assets/09cf16c5-22c0-410d-8e39-cd69305ecd31" />
 
 Oscilloscope screen captures show the various board signals in operation.  This is a separate document in the repository.
 
