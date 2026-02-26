@@ -42,6 +42,12 @@ Also, check out the video at https://youtube.com/shorts/UvEwiUESzG4?feature=shar
 
 Happy to answer any questions.
 
+Some magnetic core memory links:
 
+  https://www.modularcircuits.com/blog/projects/the-disintegrated-machine/ferrite-core-memory/
+
+  https://www.curiousmarc.com/computing/core-memory
+
+  https://corememoryshield.com/report.html
 
 
